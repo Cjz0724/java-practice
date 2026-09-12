@@ -29,7 +29,7 @@ public  class Review2 {
                     hasDigit = true;
                 }
             }
-            if (name.length() < 1 || password.length() < 1) {
+            if (name.isEmpty() || password.isEmpty()) {
                 System.out.println("用户名和密码不能为空！");
             } else if (password.length() < 8) {
                 System.out.println("密码太短！");
