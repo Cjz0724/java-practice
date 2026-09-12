@@ -8,11 +8,8 @@ public  class Review2 {
 
         int p = users.indexOf(' ');
 
-
-        boolean hasLetter;
-        boolean hasDigit;
-        hasLetter = false;
-        hasDigit = false;
+        boolean hasLetter = false;
+        boolean hasDigit = false;
 
         if (p == -1) {
             System.out.println("用户名和密码不能为空！");
