@@ -1,4 +1,3 @@
-import javax.security.auth.Subject;
 import java.util.Scanner;
 
 public  class Review2 {
