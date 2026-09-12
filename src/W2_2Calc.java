@@ -14,9 +14,9 @@ public class W2_2Calc {
         String operation = sc.next();
         char c = operation.charAt(0);
 
-      switch (c) {
+        switch (c) {
             case '+':
-              System.out.println("计算结果为：" + (a + b));
+                System.out.println("计算结果为：" + (a + b));
                 break;
             case '-':
                 System.out.println("计算结果为：" + (a - b));
@@ -25,14 +25,14 @@ public class W2_2Calc {
                 System.out.println("计算结果为：" + a * b);
                 break;
             case '/':
-                if (b == 0){
+                if (b == 0) {
                     System.out.println("除数不能为零！");
-                }else {
-                System.out.println("计算结果为：" + a / b);
+                } else {
+                    System.out.println("计算结果为：" + a / b);
                 }
                 break;
             default:
-             System.out.println("不认识运算符："+ c );
+                System.out.println("不认识运算符：" + c);
         }
 
     }

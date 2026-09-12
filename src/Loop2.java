@@ -19,21 +19,19 @@ public class Loop2 {
         for (int i = n; i <= m; i++) {
 
 
-
-            if(i%2==0){
+            if (i % 2 == 0) {
                 evencount++;
                 evensum += i;
-            }
-            else if(i%2==1){
+            } else if (i % 2 == 1) {
                 oddcount++;
                 oddsum += i;
             }
             sum += i;
         }
-        System.out.println("偶数个数："+evencount);
-        System.out.println("奇数个数："+oddcount);
-        System.out.println("偶数之和："+evensum);
-        System.out.println("奇数之和："+oddsum);
-        System.out.println("总和："+sum);
+        System.out.println("偶数个数：" + evencount);
+        System.out.println("奇数个数：" + oddcount);
+        System.out.println("偶数之和：" + evensum);
+        System.out.println("奇数之和：" + oddsum);
+        System.out.println("总和：" + sum);
     }
 }

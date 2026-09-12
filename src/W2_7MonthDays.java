@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
 public class W2_7MonthDays {
-    public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         System.out.println("输入月份：");
-        int month=sc.nextInt();
+        int month = sc.nextInt();
 
-        switch (month){
+        switch (month) {
             case 1:
             case 3:
             case 5:

@@ -11,30 +11,14 @@ public class W2_6MaxMin {
         System.out.println("输入c的大小：");
         int c = sc.nextInt();
 
-       if(a>b){
-           if(a>c){
-               System.out.println("max " + a);
-               if(b>c){
-                   System.out.println("min " + c);
-               }else {
-                   System.out.println("min " + b);
-               }
-           }else{
-               System.out.println("max " + c);
-               System.out.println("min " + b);
-           }
-       }else{
-           if(b>c){
-               System.out.println("max " + b);
-               if(a>c){
-                   System.out.println("min " + c);
-               }else  {
-                   System.out.println("min " + a);
-               }
-           }else {
-               System.out.println("max " + c);
-               System.out.println("min " + a);
-           }
-       }
+        int max = a;
+        int min = a;
+
+        if (b > max) max = b;
+        if (c > max) max = c;
+        if (b < min) min = b;
+        if (c < min) min = c;
+
+        System.out.println("最大值= " + max + "，最小值= " + min);
     }
 }

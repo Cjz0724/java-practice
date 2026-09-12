@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public  class Review2 {
+public class Review2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("输入用户名和密码(用空格隔开)");
