@@ -9,8 +9,8 @@ public  class Review2 {
         int p = users.indexOf(' ');
 
 
-        Boolean hasLetter;
-        Boolean hasDigit;
+        boolean hasLetter;
+        boolean hasDigit;
         hasLetter = false;
         hasDigit = false;
 
