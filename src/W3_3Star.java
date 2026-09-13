@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * 【第 3 周】W3_3Star — 三角形星星 ★本阶段第一次「自己推规律」
  *
@@ -26,8 +28,8 @@
  */
 public class W3_3Star {
     public static void main(String[] args) {
-
-        // 在这里写你的代码
-
+        Scanner sc = new Scanner(System.in);
+        System.out.print("打印多少行金字塔?：");
+        int n = sc.nextInt();
     }
 }
