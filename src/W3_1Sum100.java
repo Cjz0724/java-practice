@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * 【第 3 周】W3_1Sum100 — 累加与平均值
  *
@@ -22,8 +24,11 @@
  */
 public class W3_1Sum100 {
     public static void main(String[] args) {
+        double sum = 0;
 
-        // 在这里写你的代码
-
+        for (int i = 1; i <= 100; i++) {
+                sum += i;
+        }
+        System.out.println("1到100的和为：" + sum + ",平均值为：" + sum/100);
     }
 }
