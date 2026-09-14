@@ -66,7 +66,8 @@ public class W3_practice1 {
         }
         pass = (passnum / sumnum) * 100;
         avg = sum / sumnum;
-        if (sumnum!=0)System.out.println("无效个数："+fake+",最高分："+max+",最低分："+min+",平均分："+avg+",及格率："+pass +"%"+",A档人数："+level[0]);
+        if (sumnum != 0)
+            System.out.println("无效个数：" + fake + ",最高分：" + max + ",最低分：" + min + ",平均分：" + avg + ",及格率：" + pass + "%" + ",A档人数：" + level[0]);
         else System.out.println("没有有效成绩！");
     }
 }
