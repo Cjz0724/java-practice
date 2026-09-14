@@ -7,14 +7,6 @@ public class W3_practice1 {
         System.out.println("输入几个成绩？：");
         int n = sc.nextInt();
         int[] arr = new int[n];
-
-
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = sc.nextInt();
-        }
-
-        System.out.println("n=" + n + Arrays.toString(arr));
-
         int fake = 0;
         int max = 0;
         int min = 0;
@@ -25,6 +17,12 @@ public class W3_practice1 {
         double pass;
         int[] level = new int[5];
         int idx;
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println("n=" + n + Arrays.toString(arr));
 
         for (int j = 0; j < arr.length; j++) {
             if (arr[j] >= 0 && arr[j] <= 100) {
