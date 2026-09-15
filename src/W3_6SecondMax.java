@@ -1,33 +1,44 @@
-/**
- * 【第 3 周】W3_6SecondMax — 第二大的值（面试常考题的简化版）
- *
- * ■ 要求
- *   找出一组数里「第二大」的值，不排序。
- *
- * ■ 练的是
- *   两个变量追踪、多分支 if
- *
- * ■ 验收标准
- *   {5,3,9,1,7} → 7
- *   {9,9,5}     → 9    （重复值算数）
- *   {1,1,1}     → 提示没有第二大
- *
- * ■ 动手前先想（这题的难点）
- *   1. 你要同时跟踪「最大」和「第二大」两个变量，初始值分别取什么？
- *   2. 遇到一个比 max 还大的数时，**原来的 max 去哪了**？
- *      （清单原话：难点在「更新最大值时，原来的最大值要降级成第二大」）
- *   3. 遇到一个比 max 小、但比 second 大的数，怎么处理？
- *   4. 全是同一个数时，怎么判断出「没有第二大」？
- *
- * ■ 提醒
- *   先在纸上用 {5,3,9,1,7} 手动走一遍，把每一轮 max 和 second 的值写下来，再写代码。
- */
+import java.util.Scanner;
 public class W3_6SecondMax {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        int[] arr = {5, 3, 9, 1, 7};
+        System.out.println("数组里几个数？：");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
 
-        // 在这里写你的代码
+        System.out.println("数组元素录入！");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+        System.out.println("数组录入完成！");
 
+        int max = Integer.MIN_VALUE;
+        int second = Integer.MIN_VALUE;
+
+        for (int j : arr) {
+            if (j > max) {
+                second = max;
+                max = j;
+            } else if (j > second) {
+                second = j;
+            }
+        }
+
+        int maxCount = 0;
+        for (int k : arr) {
+            if (k == max) maxCount++;
+        }
+
+        if (maxCount == arr.length) {
+            // 所有元素都相等（如 {1,1,1}、{9,9,9,9}）→ 没有第二大
+            System.out.println("没有第二大");
+        } else if (second == max) {
+            // 有并列的最大值，且还存在别的数（如 {9,9,5}）→ 第二大就是 max 本身
+            System.out.println("第二大是：" + max);
+        } else {
+            // 最大值只有一个 → second 就是第二大
+            System.out.println("第二大是：" + second);
+        }
     }
 }
