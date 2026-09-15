@@ -38,8 +38,10 @@ public class W3_7Reverse {
         for (int k = 0; k < n; k++) {
             arr[k] = sc.nextInt();
         }
+
         System.out.print("原数组:");
         System.out.println(Arrays.toString(arr));
+
         while (i < j) {
             int temp = arr[i];
             arr[i] = arr[j];
@@ -47,7 +49,9 @@ public class W3_7Reverse {
             i++;
             j--;
         }
+
         System.out.print("新数组:");
         System.out.println(Arrays.toString(arr));
+
     }
 }
