@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class W3_6SecondMax {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -31,13 +32,10 @@ public class W3_6SecondMax {
         }
 
         if (maxCount == arr.length) {
-            // 所有元素都相等（如 {1,1,1}、{9,9,9,9}）→ 没有第二大
             System.out.println("没有第二大");
         } else if (second == max) {
-            // 有并列的最大值，且还存在别的数（如 {9,9,5}）→ 第二大就是 max 本身
             System.out.println("第二大是：" + max);
         } else {
-            // 最大值只有一个 → second 就是第二大
             System.out.println("第二大是：" + second);
         }
     }
